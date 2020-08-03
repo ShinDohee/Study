@@ -47,12 +47,6 @@
 
 
 
-***
-
----
-
-
-
 # 2. 배열로 데이터 컬렉션을 관리하라 
 
 #### Tip5. 배열로 유연한 컬렉션을 생성하라 
@@ -64,6 +58,27 @@ function displayShipping(sections){
 	return sections.includes('shipping');
 }</code></pre>
 
+#### Tip7. 펼침 연산자로 배열을 본떠라 
+
+#### Tip8. push() 메서드 대신 펼침 연산자로 원본 변경을 피하라
+
+> 펼침 연산자의 이점
+>
+> * 가변인수-apply() 대체(배열 요소를 함수의 이수로 사용하고자 할 때)
+>
+> * 복사하기 - 원본을 조작하지 않고 복사본으로 정렬하기
+>
+> * 객체 펼침 연산- object.assign() 대체
+>
+> * 배열 펼침연산자 - 배열리터럴 내에서의 사용 등등 
+>
+>   [출처] ([https://velog.io/@kwonh/ES6-%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%BB%AC%EB%A0%89%EC%85%98-Array2-%EB%B0%B0%EC%97%B4-%ED%8E%BC%EC%B9%A8%EC%97%B0%EC%82%B0%EC%9E%90%EC%A0%84%EA%B0%9C%EC%97%B0%EC%82%B0%EC%9E%90-Spread-Syntax-Spread-Operator-1y6chdfg](https://velog.io/@kwonh/ES6-데이터컬렉션-Array2-배열-펼침연산자전개연산자-Spread-Syntax-Spread-Operator-1y6chdfg))
+
+#### Tip9. 펼침 연산자로 정렬에 의한 혼란을 피하라
 
 
+
+# 3.특수한 컬랙션을 이용해 코드 명료성을 극대화하라
+
+ #### Tip10. 객체를 이용해 정적인 키-값을 탐색하라
 
