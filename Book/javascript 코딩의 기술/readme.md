@@ -1,3 +1,5 @@
+
+
 # 1. 변수할당으로 의도를 표현하라.
 
 ####  Tip1. 변수의 재할당을 피해라	
@@ -43,7 +45,25 @@
 
 
 
+
+
+***
+
 ---
+
+
+
+# 2. 배열로 데이터 컬렉션을 관리하라 
+
+#### Tip5. 배열로 유연한 컬렉션을 생성하라 
+
+#### Tip6. include()로 존재여부를 파악하라
+
+<pre><code>const section = ['contack' , 'shipping'];
+function displayShipping(sections){
+	return sections.includes('shipping');
+}</code></pre>
+
 
 
 
