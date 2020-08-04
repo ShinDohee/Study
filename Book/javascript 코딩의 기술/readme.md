@@ -82,3 +82,5 @@ function displayShipping(sections){
 
  #### Tip10. 객체를 이용해 정적인 키-값을 탐색하라
 
+#### Tip11.  Object.assign() 으로 조작없이 객체를 생성하라 
+
