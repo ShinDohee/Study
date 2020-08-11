@@ -84,3 +84,27 @@ function displayShipping(sections){
 
 #### Tip11.  Object.assign() 으로 조작없이 객체를 생성하라 
 
+* Object.assign() : 일련의 객체를 전달받고 가장 먼저 인수로 받은 객체를 뒤이어 인수로 넘긴 개체의 키-값을 이용해서 갱신 후 첫번째 객체를 반환.
+
+>  Object.assign({}, default, book)  첫번째 객체에 빈객체를 사용하면, 원본객체의 조작 없이 빈객체에 정보가 갱신되어 반환됨. 
+
+* 중첩객체 복사는 Object.assign ()을 이용하여 복사하도록 하면, 모든것을 갱신할 수 있다
+
+  <pre>
+      <code>
+      const employee2 = Object.assign(
+      {},
+      defaultEmployee,
+      {
+      	name: Object.assign({}, defaultEmp;ouee.name),
+      },
+      );
+      
+      export{defalute}
+      </code>
+  </pre>
+
+    - 로대시( Lodash) 라이브러리의 경우 cloneeDeep()메소드를  이용할 수 있다. 
+
+#### Tip12. 객체펼침 연산자로 정보를 갱신하라 
+
