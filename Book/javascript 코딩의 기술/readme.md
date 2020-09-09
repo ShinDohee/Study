@@ -92,19 +92,25 @@ function displayShipping(sections){
 
   <pre>
       <code>
-      const employee2 = Object.assign(
-      {},
-      defaultEmployee,
-      {
-      	name: Object.assign({}, defaultEmp;ouee.name),
-      },
-      );
-      
-      export{defalute}
-      </code>
+          const employee2 = Object.assign(
+          {},
+          defaultEmployee,
+          {
+              name: Object.assign({}, defaultEmp;ouee.name),
+          },
+          );
+          export{defalute}
+      	</code>
+      </pre>
+  
+
+</code>
+
   </pre>
 
     - 로대시( Lodash) 라이브러리의 경우 cloneeDeep()메소드를  이용할 수 있다. 
 
 #### Tip12. 객체펼침 연산자로 정보를 갱신하라 
+
+#### Tip13.  맵으로 명확하게 키-값 데이터를 갱신하라
 
