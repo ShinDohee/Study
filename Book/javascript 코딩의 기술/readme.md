@@ -228,7 +228,129 @@ function displayShipping(sections){
 
 ### Tip 20. 화살표 함수로 반복문을 단순하게 만들어라 
 
-화살표 함수란 ? 필요 없는 정보를 최대한 걷어 낸다. 
+화살표 함수란 ? 필요 없는 정보를 최대한 걷어 낸다.  ( function 키워드 , 인수를 감싸는 괄호 , return 키워드, 중괄호)
+
+> function capitalize(name){
+> return name[0].toUpperCase() +name.slice(1);
+>
+> => 기명함수 : 이름이 함수의 일부로 선언되어 있다는 것. 
+
+> const assignedFunction = function(){
+>
+> }
+>
+> => 익명 함수 : 람다 대수로부터 영향을 받아 만들어진 프로그래밍에서 함수를 표현하는 방식의 일종
+
+익명 함수를 변수에 할당하는 방식을 화살표 함수로 바꾸는 경우에도 사용, function 키워드를 제거하고 두꺼운 화살표로 대체 , 
+
+매개변수가 하나뿐이라면 괄호도 제거 가능.
+
+> const capitalize = name => {
+>
+> return name[0].toUpperCase()+name.slice(1);
+>
+> }
+
+1. 매개변수가 없는 경우, 괄호 사용
+
+>before : 
+>
+>function key (){
+>
+>return 'abc123';
+>
+>}
+>
+>after :
+>
+>conster key = () =>{
+>
+>return 'abc123';
+>
+>}before : 
+>
+>function key (){
+>
+>return 'abc123';
+>
+>}
+>
+>after :
+>
+>conster key = () =>{
+>
+>return 'abc123';
+>
+>}
+
+2. 매개변수가 2개 이상인 경우, 괄호 사
+
+> before  :
+>
+> function greet(first, last){
+>
+> return '안녕하세요, ${capitalize(first)}, ${capitalize(last)}님'; 
+>
+> } 
+>
+> after :
+>
+>  const greet = (first, last) =>{
+>
+> return '안녕하세요, ${capitalize(first)}, ${capitalize(last)}님'; 
+>
+> }
+
+3. return 키워드도 사용할 필요가 없다. 즉, 함수 몸체의 실행결과를 자동으로 반환한다. 
+
+>before : 
+>
+>fucntion formatUser(name){
+>
+>return ' ${capitalize(name)}님이 로그인 했습니다. '; 
+>
+>}
+>
+>after : 
+>
+>const formatUser = name => ' ${capitalize(name)}님이 로그인 했습니다. '; 
+
+4. 자바 스크립트에서는 함수를 다른 함수에 인수로 전달 가능
+
+   콜백 함수란 ? 원래 함수의 끝에서 실행 하는 함수. 
+
+>1. 기명함수를 생성하고 전달
+>
+>   function applyCustomGreeting(name, callback){
+>
+>   ​	return callback(capitalize(name));
+>
+>   }
+>
+>2. 원본 함수를 호출 할 때 익명 함수를 생성하면 더 편리함
+>
+>   applyCustomGreeting('mark', fuction (name){
+>
+>   ​	return '안녕, ${name}!';
+>
+>   });
+>
+>3. 이 익명 함수의 불필요한 부분을 생략 ()
+>
+>   applyCustomGreeting('mark', name=>'안녕, ${name}!'; );
+
+### Tip 21. 배열 메서드로 반복문을 짧게 작성하라 
+
+- map() : 형태를 바꿀 수 있지만 길이 유지 
+- sort () : 형태나  길이는 변경되지 않고 순서만 변경
+- filter() : 길이는 변경되지만 형태는 바꾸지 않음
+- finde() : 배열을 반환하지 않는다. 한개의 데이터가 반환 되고, 형태는 바뀌지 않음
+- forEach(): 형태를 이용하지만 아무것도 반환하지 않는다. 
+- reduce() : 길이와 형태를 바꾸는 것을 비롯해 무엇이든 처리할 수 있다. 
+
+### Tip 22. map() 메서드로 비슷한 길이의 배열을 생성하라 
+
+### Tip23. filter()와 find()로 데이터의 부분집합을 생성하라 
 
 
 
