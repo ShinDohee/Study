@@ -230,60 +230,54 @@ function displayShipping(sections){
 
 화살표 함수란 ? 필요 없는 정보를 최대한 걷어 낸다.  ( function 키워드 , 인수를 감싸는 괄호 , return 키워드, 중괄호)
 
-> function capitalize(name){
-> return name[0].toUpperCase() +name.slice(1);
->
-> => 기명함수 : 이름이 함수의 일부로 선언되어 있다는 것. 
 
-> const assignedFunction = function(){
->
-> }
->
-> => 익명 함수 : 람다 대수로부터 영향을 받아 만들어진 프로그래밍에서 함수를 표현하는 방식의 일종
+    function capitalize(name){
+    	return name[0].toUpperCase() +name.slice(1);
+    }
+    // 기명함수 : 이름이 함수의 일부로 선언되어 있다는 것. 
+
+
+    const assignedFunction = function(){
+    	//익명 함수 : 람다 대수로부터 영향을 받아 만들어진 프로그래밍에서 함수를 표현하는 방식의 일종
+    }
+
+
 
 익명 함수를 변수에 할당하는 방식을 화살표 함수로 바꾸는 경우에도 사용, function 키워드를 제거하고 두꺼운 화살표로 대체 , 
 
 매개변수가 하나뿐이라면 괄호도 제거 가능.
 
-> const capitalize = name => {
->
-> return name[0].toUpperCase()+name.slice(1);
->
-> }
+<pre>
+    const capitalize = name => {
+		return name[0].toUpperCase()+name.slice(1);
+	}
+</pre>
+
+
 
 1. 매개변수가 없는 경우, 괄호 사용
 
->before : 
->
->function key (){
->
->return 'abc123';
->
->}
->
->after :
->
->conster key = () =>{
->
->return 'abc123';
->
->}before : 
->
->function key (){
->
->return 'abc123';
->
->}
->
->after :
->
->conster key = () =>{
->
->return 'abc123';
->
->}
+    before : 
+        function key (){
+       		 return 'abc123';
+        }
+    after :
+        conster key = () =>{
+       		 return 'abc123';
+        }
+        
+    before : 
+        function key (){
+        	return 'abc123';
+        }
+    after :
+        conster key = () =>{
+        	return 'abc123';
+        }
 
-2. 매개변수가 2개 이상인 경우, 괄호 사
+
+
+2. 매개변수가 2개 이상인 경우, 괄호 사용 가능
 
 > before  :
 >
