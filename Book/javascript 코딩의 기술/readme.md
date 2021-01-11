@@ -338,13 +338,80 @@ function displayShipping(sections){
 - map() : 형태를 바꿀 수 있지만 길이 유지 
 - sort () : 형태나  길이는 변경되지 않고 순서만 변경
 - filter() : 길이는 변경되지만 형태는 바꾸지 않음
-- finde() : 배열을 반환하지 않는다. 한개의 데이터가 반환 되고, 형태는 바뀌지 않음
+- find() : 배열을 반환하지 않는다. 한개의 데이터가 반환 되고, 형태는 바뀌지 않음
 - forEach(): 형태를 이용하지만 아무것도 반환하지 않는다. 
 - reduce() : 길이와 형태를 바꾸는 것을 비롯해 무엇이든 처리할 수 있다. 
 
 ### Tip 22. map() 메서드로 비슷한 길이의 배열을 생성하라 
 
+map() 메서드를 통해, 정보의 부분집합을 생성 할 수 있다. 
+
+map() 메서드는 흔히 사용되고, 새롭게생성되는 배열에 메스드의 콜백에서 반환하는 정보가 담김. 
+
+즉, 다른 배열 메서드에 비해 반환값을 알기 쉬움. 
+
+map() 메사드를 사용하면 새로운 값을 담을 배열을 준비할 필요가 없음. 배열 메서드의 일부로 포함되기 때문.
+
+또한, push()메서드로 옮길 필요도 없음,  
+
+map()메서드는 맵 함수의 실행결과를 반환될 배열에 추가하기 때문, 
+
+그래서 원본 배열의 각 항목을 인수로 받아 새롭게 생성될 배열에 담길 값을 반환한ㄴ
+
+
+```javascript
+const instrunments = band.map(member => member.instrument);
+//  instrument 는 band 라는 object 배열의 map()함수의 실행 결과 배열을 담는다. 
+```
+
+** 맵 객체와  혼동 하지 말것 (위 소스에서 memebr)
+
 ### Tip23. filter()와 find()로 데이터의 부분집합을 생성하라 
+
+데이터 형태는 유지하면서 전체 항목의 일부만 필요한 경우는 filter() 메소드가 적합.
+
+map()메서드와 다르게, 배열에있는 정보를 변경하지 않는다. 단, 반환되는 배열의 길이를 줄일뿐.
+
+
+```javascript
+const scores =[30, 82, 70, 45];
+function getNumberOfPassingScores(scores){
+    const passing = scores.filter(scores => scores >=59);
+    //[87,70]
+    return passing.length;
+}
+//2
+
+function getNumberOfPassingScores(scores){
+    const passing = scores.filter(scores => scores === 100);
+    //[]
+    return passing.length;
+}
+// 0
+```
+
+filter()함수는 ture or false  반환하지만, 최종적으로 반환되는 배열에는 실제 값이 담긴다. 
+
+필터 함수는 각각의 점수를 한번에 하나씩 검사하고, 반환값이 ture 일떄는 값을 그대로 유지합니다. 또한 **반환되는 배열은 원본 배열 순서도 그대로 유지** 
+
+filter() 메서드는 항상 배열을 반환하며 조건이 일치하는 값이 없는 경우에도 반환한다. 
+
+match() 메서드가 참 or 거짓을 반환하기 때문에 필터 함수에 곧바로 사용할 수 있다. 
+
+
+```javascript
+const daves = team.filter(member => member.mathch(/Dav/));
+```
+
+가끔 배열에 조건과 일치하는 항목이 최대 하나뿐이라는 사실을 알고 있는 경우가 있다. 그런 경우에는 filter() 메서드와 비슷한 find() 메서드를 사용할 수 있다. 
+
+find() 메서드는 참 or 거짓 값을 반환하는 함수를 인수로 받고, 배열의 항목에 전달한 함수로 평가해 참 값을 반환하는 첫번째 항목만 반환합니다. 참값을 반환하는 항목이 없다면 undefined를 반환한다. 
+
+ex)특정 id를 찾는 경우.. 
+
+### Tip24. forEach()로 동일한 동작을 적용하라 
+
+### Tip25.체이닝으로 메서드를 연결하라.
 
 
 
